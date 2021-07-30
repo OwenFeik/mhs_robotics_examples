@@ -50,6 +50,12 @@ void loop() {
         s - Stop the motor.
         g - Start the motor.
         number - Set the motor to (number * 10)% speed. e.g. 9 => 90% speed. 
+
+    To drive the motor, we need to set one pin LOW (off) and write a PWM signal
+    to the other. This PWM signal is a "duty cycle"; it indicates, as a
+    proportion of 255, how much of the time the pin should be on for. If the
+    duty cycle is 1 (i.e. 255/255), the motor will be at full speed. If it is
+    50% (128/255), the motor will be at half speed, etc.
     */
     while (Serial.available()) {
         char input = Serial.read();
