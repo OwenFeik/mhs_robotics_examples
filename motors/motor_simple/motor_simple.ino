@@ -37,6 +37,12 @@ void setup() {
     USB port.
     */
     Serial.begin(BAUD_RATE);
+
+    /*
+    Set up the PWM pins for output to the H-bridge to drive the motor.
+    */
+    pinMode(MOTOR_PIN_1, OUTPUT);
+    pinMode(MOTOR_PIN_2, OUTPUT);
 }
 
 /*
