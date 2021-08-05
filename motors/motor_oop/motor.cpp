@@ -10,6 +10,9 @@ Arduino.h provides the Arduino standard library. It is automatically included
 in your main .ino file, but if you want to access its functions in other files,
 you'll need to include it manually.
 
+We use <> instead of "" around this include because it is a system library
+rather than a local file in the same folder.
+
 This file uses the Arduino functions
     pinMode, to set up pins for writing to drive the motor.
     digitalWrite, to turn on and off pin outputs.
@@ -17,7 +20,7 @@ This file uses the Arduino functions
     map, to map values from one number range to another.
     abs, to get the absolute value of numbers.
 */
-#include "Arduino.h"
+#include <Arduino.h>
 
 /*
 We include motor.h to bring the Motor class into scope so that we can implement
