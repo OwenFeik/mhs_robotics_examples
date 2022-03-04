@@ -2,8 +2,19 @@
 
 \renewcommand{\familydefault}{\sfdefault} % San Serif Font
 
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{textcomp}
+\usepackage{wrapfig}
+
+\newcommand{\imageright}[1]{
+    \begin{wrapfigure}{r}{0.5\textwidth}
+        \begin{center}
+            \includegraphics[width=0.48\textwidth]{#1}
+        \end{center}
+    \end{wrapfigure}
+}
 
 \begin{document}
 \raggedright
@@ -17,6 +28,8 @@
 \subsection*{Exporting from Fusion 360}
 \label{sec:exporting}
 
+\imageright{export_body.png}
+
 To export a model from Fusion 360 for printing, follow the following steps.
 
 \begin{itemize}
@@ -25,8 +38,8 @@ To export a model from Fusion 360 for printing, follow the following steps.
         \textit{Combine} tool to unify them.
     \item Navigating to \textit{Bodies} in the object browser in the top left,
         find the body you wish to print. Right click on it and select
-        \textit{Save as Mesh}. Choose \texttt{STL} or \texttt{OBJ} as the file
-        format. 
+        \textit{Save as Mesh}. Choose \texttt{STL} as the format,
+        \textit{Binary} or \textit{ASCII} will both work fine. 
 \end{itemize}
 
 You can use this 3D model file for slicing in Cura, or other slicing software.
@@ -49,6 +62,10 @@ During this step, you should select \textit{Add a non-networked printer} and
 navigate to choose either a Creality Ender 3 or a Prusa3D i3 MK3S, as these
 are the two printers we have (at time of writing). You can easily add more
 printers at a later date, so it doesn't matter very much which you choose.
+
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{add_printer.png}
+\end{center}
 
 \subsection*{Slicing In Cura}
 \label{sec:slicing}
@@ -206,4 +223,6 @@ print. See the individual printing instructions for each printer below.
         print.
     \item If you notice something going wrong during the print, select
         \texttt{Stop print} to abort.
+\end{itemize}
+
 \end{document}
