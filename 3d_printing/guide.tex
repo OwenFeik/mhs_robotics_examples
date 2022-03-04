@@ -47,7 +47,8 @@ installed, etc. None of these matter except for the one which asks that you
 add a printer. \par
 During this step, you should select \textit{Add a non-networked printer} and
 navigate to choose either a Creality Ender 3 or a Prusa3D i3 MK3S, as these
-are the two printers we have (at time of writing). 
+are the two printers we have (at time of writing). You can easily add more
+printers at a later date, so it doesn't matter very much which you choose.
 
 \subsection*{Slicing In Cura}
 \label{sec:slicing}
@@ -58,7 +59,7 @@ Make sure you have the appropriate 3D printer selected for your current print
 job. \par
 Open the settings menu in the top right corner and configure the following
 settings appropriately. It may take you a little while to develop an intuition
-for what settings are appropriate, but the defaults specified below should
+for what a given print will require, but the defaults specified below should
 generally work well.
 
 \begin{itemize}
@@ -115,9 +116,9 @@ to a micro SD card for printing).
 \label{sec:printers}
 
 We presently (as of March 2022) have two 3D printers at Robotics Club. These are
-are a Prusa MK3S+ and an Ender 3. Make sure that you use the right profile when
-printing, as it will affect the available print area and nozzle dimensions,
-which must be correct for a successful print.
+are a Creality Ender 3 or a Prusa3D i3 MK3S. Make sure that you use the right
+profile when printing, as it will affect the available print area and print head
+dimensions, which must be correct for a successful print.
 
 \subsection*{Bed Levelling}
 \label{sec:levelling}
@@ -126,8 +127,9 @@ Before printing, the bed of a 3D Printer must be levelled to ensure a flat
 surface for the model to be layed on. The Prusa printer has \textit{automatic
 bed levelling}, so no extra step needs to be taken if you are using this
 printer. It will instead automatically move the head across the print bed and
-test the However, the Ender requires manual bed levelling, which is a little
-more involved. The process is as follows
+test the bed height at a matrix of positions, which it uses to perform software
+adjustments without your input. The Ender requires manual bed levelling, which
+is a little more involved. The process is as follows
 
 \begin{itemize}
     \item Turn on the printer, and press the wheel on the front panel to access
@@ -142,8 +144,8 @@ more involved. The process is as follows
         slide around the bed and print head.
     \item Take a piece of paper (printer paper works perfectly) and slide it
         between the nozzle and the print bed. If you can't, you may need to turn
-        the wheel on the underside of the print bed clockwise to loosen the gap
-        between the print bed and nozzle.
+        the wheel on the underside of the print bed counter-clockwise to
+        increase the gap between the print bed and nozzle.
     \item Test how tight the nozzle is against the sheet of paper. You should be
         able to move the paper without tearing it, but should still feel some
         friction with the nozzle. Using the wheel below the print bed, turning
@@ -153,7 +155,7 @@ more involved. The process is as follows
         this process for the other three corners of the print bed, such that
         the nozzle has the same light friction with the nozzle in each corner.
         Make sure you re-test the corners you've done once you finish, as
-        adjusting one corner may affect the tightnes of another.
+        adjusting one corner may affect the tightness of another.
    \item Once you're satisfied that the nozzle is at roughly the height of a
         sheet of paper in all four corners of the print bed, the bed is level.
         Congratulations!
