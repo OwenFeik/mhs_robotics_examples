@@ -5,14 +5,15 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{placeins}
 \usepackage{textcomp}
 \usepackage{wrapfig}
 
-\newcommand{\imageright}[1]{
-    \begin{wrapfigure}{r}{0.5\textwidth}
-        \begin{center}
-            \includegraphics[width=0.48\textwidth]{#1}
-        \end{center}
+\newcommand{\imageright}[2]{
+    \begin{wrapfigure}{r}{#2\textwidth}
+        \centering
+        \includegraphics[width=#2\textwidth]{#1}
+        \vspace*{-1cm}
     \end{wrapfigure}
 }
 
@@ -28,7 +29,7 @@
 \subsection*{Exporting from Fusion 360}
 \label{sec:exporting}
 
-\imageright{export_body.png}
+\imageright{export_body.png}{0.5}
 
 To export a model from Fusion 360 for printing, follow the following steps.
 
@@ -44,6 +45,7 @@ To export a model from Fusion 360 for printing, follow the following steps.
 
 You can use this 3D model file for slicing in Cura, or other slicing software.
 
+\pagebreak
 \subsection*{Setting Up Cura}
 \label{sec:setup}
 
@@ -67,17 +69,28 @@ printers at a later date, so it doesn't matter very much which you choose.
     \includegraphics[width=0.6\textwidth]{add_printer.png}
 \end{center}
 
+\pagebreak
+
+{
+
 \subsection*{Slicing In Cura}
 \label{sec:slicing}
+
+\imageright{slicing_settings.png}{0.25}
 
 Launch Cura and select the folder icon in the top left corner to load your 3D
 model (repeat this process if you want to print multiple models). \par
 Make sure you have the appropriate 3D printer selected for your current print
-job. \par
+job. Click the material settings tab in the middle and ensure that
+\textit{Generic PLA} is selected, with the appropriate nozzle diameter for the
+printer you're slicing for. \par
 Open the settings menu in the top right corner and configure the following
-settings appropriately. It may take you a little while to develop an intuition
+settings appropriately. To find them you might need to click \textit{Custom} and
+then use the search bar. It may take you a little while to develop an intuition
 for what a given print will require, but the defaults specified below should
 generally work well.
+
+}
 
 \begin{itemize}
     \item \textit{Layer Height} dictates how thick each layer of the print will
@@ -86,7 +99,7 @@ generally work well.
         of 0.2mm is a good choice. You may want to use a lower layer height for
         parts where good detail is important, though a larger layer height means
         faster print times and generally greater part strength (within reason).
-    \item \textit{Layer Width} should be set in all cases to the nozzle
+    \item \textit{Line Width} should be set in all cases to the nozzle
         diameter. So for a 0.4mm nozzle, this would be 0.4mm. In older versions
         of Cura, this is configured by selecting the material and configuring
         the nozzle size.
@@ -129,11 +142,12 @@ to see the generated supports, bed adhesion and other helpers here. If this
 looks good, save the file by clicking \textit{Save to Disk} (or save directly
 to a micro SD card for printing).
 
+\pagebreak
 \section*{Printers}
 \label{sec:printers}
 
 We presently (as of March 2022) have two 3D printers at Robotics Club. These are
-are a Creality Ender 3 or a Prusa3D i3 MK3S. Make sure that you use the right
+are a Creality Ender 3 and a Prusa3D i3 MK3S. Make sure that you use the right
 profile when printing, as it will affect the available print area and print head
 dimensions, which must be correct for a successful print.
 
@@ -178,6 +192,7 @@ is a little more involved. The process is as follows
         Congratulations!
 \end{itemize}
 
+\pagebreak
 \subsection*{Printing}
 \label{sec:printing}
 
@@ -190,9 +205,10 @@ When slicing, you will produce a \texttt{.gcode} file, which you can either save
 to a micro SD card directly through Cura or copy across. If you don't have a
 micro SD card slot, micro SD to SD adapters are available (ask a mentor), or
 send your file to a peer who does and get them to save it for you. \par
-Once you have you file on a micro SD card, you can take it to the printer to
+Once you have your file on a micro SD card, you can take it to the printer to
 print. See the individual printing instructions for each printer below. 
 
+\imageright{ender.jpg}{.25}
 \subsubsection*{Ender}
 
 \begin{itemize}
@@ -209,6 +225,7 @@ print. See the individual printing instructions for each printer below.
         \texttt{Stop print} to abort.
 \end{itemize}
 
+\imageright{prusa.jpg}{.25}
 \subsubsection*{Prusa}
 
 \begin{itemize}
