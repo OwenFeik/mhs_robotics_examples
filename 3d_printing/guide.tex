@@ -9,11 +9,11 @@
 \usepackage{textcomp}
 \usepackage{wrapfig}
 
-\newcommand{\imageright}[2]{
+\newcommand{\imageright}[3]{
     \begin{wrapfigure}{r}{#2\textwidth}
         \centering
         \includegraphics[width=#2\textwidth]{#1}
-        \vspace*{-1cm}
+        \vspace*{#3}
     \end{wrapfigure}
 }
 
@@ -29,7 +29,7 @@
 \subsection*{Exporting from Fusion 360}
 \label{sec:exporting}
 
-\imageright{export_body.png}{0.5}
+\imageright{export_body.png}{0.5}{-2cm}
 
 To export a model from Fusion 360 for printing, follow the following steps.
 
@@ -67,6 +67,7 @@ printers at a later date, so it doesn't matter very much which you choose.
 
 \begin{center}
     \includegraphics[width=0.6\textwidth]{add_printer.png}
+    \vspace*{-2cm}
 \end{center}
 
 \pagebreak
@@ -76,7 +77,7 @@ printers at a later date, so it doesn't matter very much which you choose.
 \subsection*{Slicing In Cura}
 \label{sec:slicing}
 
-\imageright{slicing_settings.png}{0.25}
+\imageright{slicing_settings.png}{0.25}{-1cm}
 
 Launch Cura and select the folder icon in the top left corner to load your 3D
 model (repeat this process if you want to print multiple models). \par
@@ -206,7 +207,7 @@ send your file to a peer who does and get them to save it for you. \par
 Once you have your file on a micro SD card, you can take it to the printer to
 print. See the individual printing instructions for each printer below. 
 
-\imageright{ender.jpg}{.25}
+\imageright{ender.jpg}{.25}{-2cm}
 \subsubsection*{Ender}
 
 \begin{itemize}
@@ -223,7 +224,7 @@ print. See the individual printing instructions for each printer below.
         \texttt{Stop print} to abort.
 \end{itemize}
 
-\imageright{prusa.jpg}{.25}
+\imageright{prusa.jpg}{.25}{-2cm}
 \subsubsection*{Prusa}
 
 \begin{itemize}
