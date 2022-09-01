@@ -13,7 +13,7 @@ We need to wire the battery to the motor driver, to provide power, the motor
 driver to the battery, to drive the motor, and the Arduino to the motor driver
 to control the motor. The motor driver looks like this
 
-![L298N Motor Driver](/photos/motors/l298n.jpg)
+![L298N Motor Driver](photos/l298n.jpg)
 
 Each motor has two wires, and these need to be connected to the output ports of
 the motor driver, arranged in pairs on the left and right in the image above,
