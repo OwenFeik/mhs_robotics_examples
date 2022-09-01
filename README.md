@@ -8,12 +8,16 @@ mentor.
 
 The included examples at this stage are
 
-* `motors/`
+* `motors/` an explanation of how to drive a simple DC motor using an Arduino,
+    a LiPo battery and an L298N H-Bridge motor driver.
     * `motor_simple/` a simple, one file implementation of motor driving in 
-        Arduino assuming an L298N H-Bridge motor driver.
+        Arduino.
     * `motor_oop/` a slightly more complex, object-oriented implementation of
         driving the same setup as in `motors/motor_simple/`. If you're new to
         C/C++, I would suggest starting with the simple version.
+* `colour_sensors/`
+    * `TSC3200/` a demonstration of how to use the TCS3200 colour sensor with
+        an Arduino.
 
 
 ## Also See
