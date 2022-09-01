@@ -12,6 +12,8 @@ Use the breadboard for power delivery, connecting the `5V` output port on the
 Arduino to the positive power line on the breadboard. We will wire three pins
 on the colour sensor to this line.
 
+![Colour Sensor Pins](photos/closeup.jpg)
+
 * `VCC` for power delivery to the sensor.
 * `S0` because we want to set this pin to `HIGH`, which is equivalent to
     connecting it to `5V`, but a little simpler.
@@ -29,3 +31,6 @@ following pins
 
 Having connected these pins, you should be able to upload the example code to
 the Arduino, open the serial monitor and read the output of the colour sensor.
+Your setup should look something like the below
+
+![Colour Sensor Setup](photos/full.jpg)

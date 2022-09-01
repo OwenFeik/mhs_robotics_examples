@@ -29,6 +29,19 @@ the enumerated colours above, RED, BLUE or GREEN, to indicate which colour to
 read.
 */
 int readColour(char colour) {
+    /*
+    To set the colour to read, we write to S2 and S3. The colour is set
+    according to
+
+    +-------+-------+--------+
+    | S2    | S3    | Colour |
+    +-------+-------+--------+
+    | LOW   | LOW   | Red    |
+    | LOW   | HIGH  | Blue   |
+    | HIGH  | HIGH  | Green  |
+    | HIGH  | LOW   | -      |
+    +-------+-------+--------+
+    */
     switch (colour) {
       case RED:
         digitalWrite(S2_PIN, LOW);
@@ -43,9 +56,14 @@ int readColour(char colour) {
         digitalWrite(S3_PIN, HIGH);
         break;
       default:
-        return 0;
+        return -1; // Invalid colour.
     }
 
+    /*
+    The value is reported using PWM. By calling pulseIn, the Arduino will read
+    in a full pulse from the sensor and report the pulse length, which is the
+    signal emitted by the sensor. 
+    */
     return pulseIn(OUT_PIN, LOW);
 }
 

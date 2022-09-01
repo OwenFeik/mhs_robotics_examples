@@ -16,7 +16,7 @@ The included examples at this stage are
         driving the same setup as in `motors/motor_simple/`. If you're new to
         C/C++, I would suggest starting with the simple version.
 * `colour_sensors/`
-    * `TSC3200/` a demonstration of how to use the TCS3200 colour sensor with
+    * `TCS3200/` a demonstration of how to use the TCS3200 colour sensor with
         an Arduino.
 
 
